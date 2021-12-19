@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes, NavLink } from 'react-router-dom';
 import WithRouterSample from './page/WithRouterSample';
 import Profile from './Profile';
 
@@ -10,10 +10,22 @@ const Profiles = () => {
       <h3>유저목록 : </h3>
       <ul>
         <li>
-          <Link to="/profiles/kyungA">남은경</Link>
+          <NavLink
+            to="/profiles/kyungA"
+            style={({ isActive }) => ({ color: isActive ? 'pink' : 'green' })}
+          >
+            남은경
+          </NavLink>
         </li>
         <li>
-          <Link to="/profiles/gildong">홍길동</Link>
+          <NavLink
+            to="/profiles/gildong"
+            className={({ isActive }) =>
+              'nav-link' + (isActive ? ' activated' : '')
+            }
+          >
+            홍길동
+          </NavLink>
         </li>
       </ul>
       <WithRouterSample />
