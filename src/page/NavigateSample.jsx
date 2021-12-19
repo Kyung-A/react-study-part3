@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { usePrompt } from '../Blocker';
 
-function HistorySample() {
+function NavigateSample() {
   const navigate = useNavigate();
 
   // 뒤로가기
@@ -33,4 +33,4 @@ function HistorySample() {
   );
 }
 
-export default HistorySample;
+export default NavigateSample;
